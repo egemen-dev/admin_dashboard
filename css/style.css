@@ -1,5 +1,5 @@
 *{
-    /* border: solid blue 0.5px; */
+    border: solid blue 0.5px;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -45,10 +45,10 @@ span {
 
 .head-top {
     display: grid;
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 2fr 1fr;
 }
 
-.head-top > div {
+.top-left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +82,11 @@ span {
     align-items: center;
 }
 
+.search-bar button:hover {
+    transition: all .09s ease;
+    transform: scale(1.25);
+}
+
 .notif {
     height: min-content;
     flex: 1;
@@ -93,14 +98,15 @@ span {
     transform: scale(0.55)
 }
 
-.user-top {
+.user-top-right {
     grid-column: 3 / 5;
     display: flex;
     align-items: center;
     column-gap: 12px;
+    padding-right: 24px;
 }
 
-.user-top > p {
+.user-top-right > p {
     font-weight: 500;
     font-size: 1.35rem;
     display: flex;
@@ -109,12 +115,7 @@ span {
     color: rgb(49, 49, 49);
 }
 
-.top-right {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-}
-
-.top-right img {
+.user-top-right img {
     height: 5vh;
 }
 
@@ -162,12 +163,17 @@ span {
     padding-bottom: 12rem;
 }
 
-.sidebar a:hover, .dashboard-logo a:hover {
+.dashboard-logo a:hover {
+    transition: all .06s ease;
+    transform: scale(1.05);
+}
+
+.sidebar a:hover {
     transition: all .075s ease;
     transform: scale(1.1);
 }
 
-.main-content {
+.main {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
@@ -209,13 +215,15 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    column-gap: 1px;
+    column-gap: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .triple-buttons > button {
     border-radius: 60px;
     height: 2.5rem;
-    width: 6rem;
+    width: 6.5rem;
     background-color: #4dbdbb;
     color: white;
     font-size: 1rem;
@@ -233,4 +241,51 @@ span {
     margin: 1.5rem ;
     display: grid;
     grid-template-columns: 3fr 1fr;
+}
+
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 32px;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+}
+
+.uptitle {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 2px 4px 3px rgba(0, 0, 0, 0.075);
+}
+
+.card > div {
+    display: flex;
+    row-gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    height: min-content;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgb(195, 195, 195);
 }
