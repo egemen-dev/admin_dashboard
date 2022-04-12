@@ -1,5 +1,5 @@
 *{
-    border: solid blue 0.5px;
+    /* border: solid blue 0.5px; */
     margin: 0;
     padding: 0;
     height: 100%;
@@ -122,9 +122,11 @@ span {
     grid-row: 2 / 3;
     background-color: #4dbdbb;
     box-shadow: 6px 6px 6px 0px rgba(149, 149, 149, 0.418);
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
     height: 100vh;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 1.5rem;
 }
 
 .dashboard-logo {
@@ -141,19 +143,28 @@ span {
     padding-right: 16px;
     font-size: clamp(2.5rem, 2.7vw, 5rem);
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .side-top, .side-down{
-    padding-top: 13%;
-    height: 30px;
-    text-align: start;
     font-weight: 700;
-    font-size: 1.33rem;
+    font-size: 1.5rem;
     color: white;
-    display: grid;
-    row-gap: 1.33rem;
-    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: min-content;
+    row-gap: 1.5rem;
+}
+
+.side-down {
+    padding-bottom: 12rem;
+}
+
+.sidebar a:hover, .dashboard-logo a:hover {
+    transition: all .075s ease;
+    transform: scale(1.1);
 }
 
 .main-content {
@@ -211,6 +222,11 @@ span {
     font-weight: 700;
     border: 0;
     cursor: pointer;
+}
+
+.triple-buttons button:hover {
+    transition: all .085s ease;
+    transform: scale(1.08);
 }
 
 .main-container {
