@@ -394,7 +394,7 @@ span {
     display: flex;
     flex-direction: row;
     padding: 8px;
-
+    align-items: center;
 }
 
 .trends img {
@@ -409,10 +409,11 @@ span {
 }
 
 .username {
+    display: flex;
     font-weight: 700;
     font-size: 1.1rem;
-    height: min-content;
     padding-bottom: 16px;
+    align-items: flex-end;
 }
 
 .user-txt {
